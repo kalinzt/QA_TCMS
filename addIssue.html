@@ -4,11 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddIssue</title>
+    <title>이슈 생성하기</title>
 </head>
 
-<body>
+<style>
 
+</style>
+
+<body>
+    <h1 style="margin-left:1cm;">이슈 생성하기</h1>
+    <label for="issueName">이슈제목 :</label> <input type="text" style="margin-left:0.5cm;"><br>
+    <label for="issueStep">이슈설명 :</label> <input type="text" style="margin-left:0.5cm;"><br>
+
+    <form name="issueAtt1" id="issueAtt1" action="/action_page.php">
+        이슈 심각도: <select name="이슈 심각도" id="serverity">
+            <option value="default" selected="selected">심각도를 선택해주세요.</option>
+            <option value="Critical">Critical</option>
+            <option value="Major">Major</option>
+            <option value="Minor">Minor</option>
+            <option value="Trivial">Trivial</option>
+        </select>
+        <br>
+        재현빈도: <select name="재현빈도" id="frequency">
+            <option value="default" selected="selected">재현빈도를 선택해주세요.</option>
+            <option value="Always">Always</option>
+            <option value="Sometime">Sometime</option>
+            <option value="Once">Once</option>
+        </select>
+        <br>
+    </form>
+    <label for="issueStep">관련링크 :</label> <input type="url" style="margin-left:0.5cm;"><br>
+    <label for="issueStep">첨부파일 :</label> <input type="file" style="margin-left:0.5cm;"><br>
+    <input type="button" onclick="alert('취소 되었습니다.')" value="취소">
+    <input type="button" onclick="alert('이슈가 생성 되었습니다.')" value="이슈 생성">
+    <br>
+
+    <input type="button">
+    <input type="checkbox">
+    <input type="color">
+    <input type="date">
+    <input type="datetime-local">
+    <input type="email">
+    <input type="file">
+    <input type="hidden">
+    <input type="image">
+    <input type="month">
+    <input type="number">
+    <input type="password">
+    <input type="radio">
+    <input type="range">
+    <input type="reset">
+    <input type="search">
+    <input type="submit">
+    <input type="tel">
+
+    <input type="time">
+    <input type="url">
+    <input type="week">
 </body>
 
 </html>
