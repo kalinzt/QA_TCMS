@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave's TCMS</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #a444fe;
+            padding: 5px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #86009e;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 초기에 첫 번째 섹션을 활성화
+            activateSection("TCMS_project");
+
+            // 각 메뉴를 클릭했을 때 해당 섹션을 활성화
+            document.querySelectorAll("nav a").forEach(function (menuLink) {
+                menuLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                    // 클릭한 메뉴에 해당하는 섹션 활성화
+                    var targetSectionId = menuLink.getAttribute("data-target");
+                    activateSection(targetSectionId);
+                });
+            });
+
+            // 섹션을 활성화하는 함수
+            function activateSection(sectionId) {
+                // 모든 섹션 비활성화
+                document.querySelectorAll("section").forEach(function (section) {
+                    section.classList.remove("active");
+                });
+
+                // 클릭한 메뉴에 해당하는 섹션 활성화
+                document.getElementById(sectionId).classList.add("active");
+
+                // 해당 섹션에 HTML 파일 불러오기
+                fetchSectionContent(sectionId);
+            }
+
+            // 섹션에 HTML 파일을 불러오는 함수
+            function fetchSectionContent(sectionId) {
+                var sectionContainer = document.getElementById(sectionId);
+                var url = sectionId + ".html"; // HTML 파일 경로
+                console.log(123)
+                console.log(sectionContainer)
+                console.log(url)
+
+                fetch(url)
+                    .then(function (response) {
+                        return response.text();
+                    })
+                    .then(function (html) {
+                        sectionContainer.innerHTML = html;
+                    })
+                    .catch(function (error) {
+                        console.error("Error fetching section content:", error);
+                    });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <h1 style="margin-left:1cm;">TCMS Ver_0.1</h1>
+    <header>Test Case Management System</header>
+
+    <nav>
+        <a href="#" data-target="TCMS_project">프로젝트</a>
+        <a href="#" data-target="TCMS_myTask">내 작업</a>
+        <a href="#" data-target="TCMS_issueList">이슈 리스트</a>
+        <a href="#" data-target="TCMS_myPage">마이페이지</a>
+    </nav>
+
+    <section id="TCMS_project">
+        <h2>프로젝트</h2>
+        <p>프로젝트 페이지</p>
+    </section>
+
+    <section id="TCMS_myTask">
+        <h2>내 작업</h2>
+        <p>내작업 페이지</p>
+    </section>
+
+    <section id="TCMS_issueList">
+        <h2>이슈 리스트</h2>
+        <p>이슈 리스트 페이지</p>
+    </section>
+
+    <section id="TCMS_myPage">
+        <h2>마이페이지</h2>
+        <p>내정보 페이지</p>
+    </section>
+</body>
+
+</html>
