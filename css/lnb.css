@@ -1,0 +1,28 @@
+li {
+    display: block;
+    justify-content: center;
+    padding: 20px;
+    width: auto;
+    background-color: #ffffff;
+}
+
+li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+li a:hover {
+    background-color: #f5baff;
+}
+
+section {
+    display: none;
+    padding: 20px;
+}
+
+section.active {
+    display: block;
+}
