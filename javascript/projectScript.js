@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function active_subsection() {
+document.addEventListener("DOMContentLoaded", function active_subSection() {
     // 초기에 첫 번째 섹션을 활성화
     activateSection("allProject");
 
     // 각 메뉴를 클릭했을 때 해당 섹션을 활성화
-    document.querySelectorAll("li a").forEach(function active_subsection(menuLink) {
+    document.querySelectorAll("li a").forEach(function (menuLink) {
         menuLink.addEventListener("click", function (event) {
             event.preventDefault();
 
