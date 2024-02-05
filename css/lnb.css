@@ -17,12 +17,3 @@ li a {
 li a:hover {
     background-color: #f5baff;
 }
-
-section {
-    display: none;
-    padding: 20px;
-}
-
-section.active {
-    display: block;
-}
