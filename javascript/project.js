@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function active_subSection() {
     // 섹션에 HTML 파일을 불러오는 함수
     function fetchSectionContent(sectionId) {
         var sectionContainer = document.getElementById(sectionId);
-        var url = sectionId + ".html"; // HTML 파일 경로
+        var url = "/HTML/" + sectionId + ".html"; // HTML 파일 경로
 
 
         fetch(url)
