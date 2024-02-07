@@ -1,0 +1,18 @@
+  /* Main Page Toggle CSS Style Group */
+
+  .toggle-list-item {
+      margin-bottom: 10px;
+  }
+
+  .toggle-list-title {
+      cursor: pointer;
+      font-weight: bold;
+  }
+
+  .toggle-list-content {
+      display: none;
+  }
+
+  .toggle-list-content.visible {
+      display: block;
+  }
