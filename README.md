@@ -1,5 +1,5 @@
 # QA_TCMS 
-<a herf="https://kalinzt.github.io/QA_TCMS_HTML/TCMS_main.html">프로젝트 바로가기</a>
+<a herf="https://kalinzt.github.io/QA_TCMS_HTML/TCMS_main.html/">프로젝트 바로가기</a>
 # QA를 위한 테스트 관리 시스템 입니다.
 > 탐색적 테스트에서 사용하는 테스트 차터를 응용한 테스트 수행 관리 시스템을 구축한다.
 
